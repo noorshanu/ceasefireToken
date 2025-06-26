@@ -23,7 +23,8 @@ const Hero = () => {
       /> */}
       <div className="flex flex-col items-centermb-4 mt-66 md:mt-82 ">
         <div className="text-white text-3xl xs:text-4xl sm:text-5xl font-bold bangers-regular text-stroke-white max-w-xs sm:max-w-lg md:max-w-2xl leading-tight drop-shadow-lg">
-          Grab your meme now
+        No more battles – only gains.
+
         </div>
       </div>
       <div className="backdrop-blur-md bg-white/60 border border-white/70 rounded-2xl px-4 py-4 shadow-2xl mt-4 inline-block w-full max-w-xs sm:max-w-md md:max-w-lg transition-all duration-300">
