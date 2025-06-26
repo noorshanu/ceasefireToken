@@ -13,15 +13,15 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[95vh] w-full text-center bg-main px-2">
+    <section className="relative flex flex-col items-center justify-center h-[50vh] sm:min-h-[95vh] w-full text-center bg-main px-2 border-b-2 border-white">
       {/* Meme Image or Illustration */}
-      <img
+      {/* <img
         src="/images/hero-meme.png"
         alt="Meme Soldier"
         className="w-40 h-40 sm:w-56 sm:h-56 object-contain rounded-2xl shadow-xl mb-4 mt-16 md:mt-32"
         style={{ background: 'rgba(255,255,255,0.08)' }}
-      />
-      <div className="flex flex-col items-center mb-4 w-full">
+      /> */}
+      <div className="flex flex-col items-centermb-4 mt-66 md:mt-82 ">
         <div className="text-white text-3xl xs:text-4xl sm:text-5xl font-bold bangers-regular text-stroke-white max-w-xs sm:max-w-lg md:max-w-2xl leading-tight drop-shadow-lg">
           Grab your meme now
         </div>

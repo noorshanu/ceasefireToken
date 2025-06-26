@@ -11,9 +11,9 @@ function App() {
       <Hero />
       <main className='bg-[#2563eb]'> 
         <AboutUs />
-        <div className='toko-bg py-12'>
+        {/* <div className='toko-bg py-12'>
           <Tokon />
-        </div>
+        </div> */}
         <Footer />
       </main>
     </>
