@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaRegCopy } from 'react-icons/fa';
 
-const CONTRACT_ADDRESS = '6ckn2hHwPR5gBZR...qXJb9oBpump';
+const CONTRACT_ADDRESS = 'Coming Soon';
 
 const Hero = () => {
   const [toast, setToast] = useState(false);
