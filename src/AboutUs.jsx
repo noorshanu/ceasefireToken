@@ -25,15 +25,21 @@ function AboutUs() {
         className=" text-left w-full sm:w-1/2"
       >
         <h2 className="text-stroke-white text-6xl md:text-7xl font-extrabold leading-tight bangers-regular mb-4">
-          PEACE IS THE<br />PUNCHLINE.
+        CEASEFIRE ISN’T A TOKEN<br />IT’S A MOVEMENT.
+
         </h2>
         <p className="text-white text-lg md:text-xl font-bold mb-2">
-          NO BOMB, JUST MEME was born from a simple idea:<br />
-          If everyone's laughing, no one's launching missiles. We turned rage into retweets, conflict into copy-paste culture.
+        Forget bombs. Forget borders. <br />
+        We’re launching memes, not missiles.
+        <br />
+        Born from chaos, powered by humor — $CEASEFIRE flips the script.
+We turn tension into templates, and conflict into copypasta.
+
         </p>
         <p className="text-white text-lg md:text-xl font-bold mt-4">
-          We're not neutral.<br />
-          We're non-violent and very online.
+        This is not neutrality.<br />
+        This is digital disarmament.
+    
         </p>
       </motion.div>
     </section>

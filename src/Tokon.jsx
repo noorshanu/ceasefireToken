@@ -3,89 +3,74 @@ import { motion } from 'framer-motion';
 
 const cardData = [
   {
-    title: 'Public Power',
-    percent: '70%',
-    desc: 'The people hold the punchlines.',
+    title: 'LP BURN',
+    percent: '100%',
+    desc: 'The people hold the power.',
     color: 'text-orange-500',
     emoji: '💥',
+    rotate: '-3deg',
+    bg: 'bg-yellow-100',
   },
   {
-    title: 'Fuel for Fun',
-    percent: '20%',
-    desc: 'For spreading the message.',
+    title: 'NO TAX',
+    percent: '0%',
+    desc: 'No tax, no fees, no worries.',
     color: 'text-orange-500',
-    emoji: '🔥',
+    emoji: '🪙',
+    rotate: '2deg',
+    bg: 'bg-pink-100',
   },
   {
-    title: 'Vault of Vibes',
-    percent: '5%',
-    desc: 'Emergency meme reserves.',
+    title: 'NO FEE',
+    percent: '0%',
+    desc: 'No fee, no worries.',
     color: 'text-orange-500',
     emoji: '🔒',
+    rotate: '-2deg',
+    bg: 'bg-blue-100',
   },
   {
-    title: 'Burnt to Ashes',
-    percent: '5%',
-    desc: 'A salute to peace.',
+    title: 'SUPPLY',
+    percent: '1B',
+    desc: '1 Billion tokens.',
     color: 'text-orange-500',
-    emoji: '🕊️',
+    emoji: '🧮',
+    rotate: '3deg',
+    bg: 'bg-green-100',
   },
 ];
 
 export const Tokon = () => {
   return (
-    <section className="container mx-auto flex flex-col md:flex-row items-center justify-between py-12 px-4 md:px-0 min-h-[80vh]">
-      {/* Left: Heading and Grid */}
-      <motion.div
-        initial={{ x: -100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8, type: 'spring' }}
-        viewport={{ once: true }}
-        className="flex-1 flex flex-col items-center md:items-start"
-      >
-        <h2 className="text-white text-7xl font-extrabold leading-tight bangers-regular mb-8 text-stroke-white text-center md:text-left">
-          MEMENOMICS
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {cardData.map((card) => (
-            <motion.div
-              key={card.title}
-              whileHover={{
-                scale: 1.07,
-                y: -8,
-                boxShadow: '0 8px 32px 0 rgba(37,99,235,0.25)',
-                background: 'linear-gradient(135deg, #e0e7ff 0%, #bae6fd 100%)',
-                borderColor: '#2563eb',
-              }}
-              transition={{ type: 'spring', stiffness: 300, damping: 18 }}
-              className="bg-white rounded-2xl border-4 border-dashed border-blue-600 p-6 w-64 text-center flex flex-col items-center shadow-xl cursor-pointer hover:border-solid hover:border-blue-400 relative overflow-hidden"
-              style={{
-                boxShadow: '0 4px 24px 0 rgba(37,99,235,0.18)',
-                borderImage: 'linear-gradient(135deg, #2563eb 40%, #38bdf8 100%) 1',
-              }}
-            >
-              <div className="text-4xl mb-2 animate-bounce-slow">{card.emoji}</div>
-              <div className="text-black text-2xl font-bold mb-2">{card.title}</div>
-              <div className={`${card.color} text-4xl font-extrabold mb-1`}>{card.percent}</div>
-              <div className="text-black text-lg">{card.desc}</div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-      {/* Right: Meme Soldier Image */}
-      <motion.div
-        initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8, type: 'spring', delay: 0.2 }}
-        viewport={{ once: true }}
-        className="flex-1 flex justify-center mt-12 md:mt-0"
-      >
-        <img
-          src="/images/memenomics-soldier.png"
-          alt="Memenomics Soldier"
-          className="w-[420px] h-[420px] object-cover rounded-3xl"
-        />
-      </motion.div>
+    <section className="w-full flex flex-col items-center justify-center py-12 px-4 min-h-[50vh]">
+      <h2 className="text-white text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight bangers-regular mb-8 text-stroke-white text-center">
+        MEMENOMICS
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        {cardData.map((card) => (
+          <motion.div
+            key={card.title}
+            whileHover={{
+              rotate: [card.rotate, '0deg', card.rotate],
+              scale: 1.08,
+              y: -10,
+              boxShadow: '0 12px 32px 0 #facc15, 0 0 0 4px #fff',
+              backgroundColor: '#fef9c3',
+              borderColor: '#facc15',
+            }}
+            transition={{ type: 'spring', stiffness: 200, damping: 8 }}
+            className={
+              `${card.bg} relative rounded-3xl p-6 w-64 sm:w-56 text-center flex flex-col items-center shadow-cartoon border-4 border-yellow-400 font-bangers transition-all duration-200`
+            }
+            style={{ transform: `rotate(${card.rotate})` }}
+          >
+            <div className="text-5xl mb-2 animate-bounce-slow drop-shadow-cartoon">{card.emoji}</div>
+            <div className="text-black text-2xl font-bold mb-1 tracking-wide">{card.title}</div>
+            <div className={`${card.color} text-4xl font-extrabold mb-1`}>{card.percent}</div>
+            <div className="text-black text-lg mt-1">{card.desc}</div>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 }
@@ -94,3 +79,9 @@ export const Tokon = () => {
 // In your global CSS (index.css), add:
 // .animate-bounce-slow { animation: bounce 2.5s infinite; }
 // @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+// Add to index.css:
+// .shadow-cartoon { box-shadow: 4px 8px 0 #222, 0 0 0 4px #fff; }
+// .drop-shadow-cartoon { filter: drop-shadow(2px 4px 0 #222); }
+// .font-bangers { font-family: 'Bangers', system-ui; }
+// .cartoon-border { border-style: dashed; border-width: 4px; border-color: #111; opacity: 0.7; }

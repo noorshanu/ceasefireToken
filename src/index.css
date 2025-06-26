@@ -34,3 +34,8 @@
 
 .animate-fade-in { animation: fadeIn 0.4s; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+
+.shadow-cartoon { box-shadow: 4px 8px 0 #222, 0 0 0 4px #fff; }
+.drop-shadow-cartoon { filter: drop-shadow(2px 4px 0 #222); }
+.font-bangers { font-family: 'Bangers', system-ui; }
+.cartoon-border { border-style: dashed; border-width: 4px; border-color: #111; opacity: 0.7; }

@@ -14,7 +14,7 @@ const NavBar = () => {
     >
       <div className="flex items-center space-x-3">
         <a href="/" className="flex items-center space-x-2">
-          <img src="/images/logo.jpeg" alt="logo" className="w-28 h-14 md:w-33 md:h-20" />
+          <img src="/images/logo.jpeg" alt="logo" className="w-28 h-24 md:w-33 md:h-30 rounded-full border-2 border-white" />
         </a>
       </div>
       {/* Desktop Menu */}
